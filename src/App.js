@@ -7,7 +7,6 @@ import GestionInventario from './componentes/GestionInventario';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-
 const App = () => {
     const [token, setToken] = useState(''); // Estado para manejar el token
 
@@ -48,7 +47,7 @@ const App = () => {
                 <div className="container mt-5">
                     <Routes>
                         <Route path="/" element={token ? <GestionInventario token={token} /> : <Login onLogin={handleLogin} />} />
-
+                        <Route path="/register" element={<Register />} /> {/* Ruta para el componente Register */}
                     </Routes>
                 </div>
             </div>
